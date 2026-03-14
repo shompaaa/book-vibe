@@ -1,9 +1,10 @@
 import React from 'react';
+import errorImage from '../../assets/images/404.png'
 
 const ErrorPage = () => {
     return (
-        <div className='mx-0 my-auto'>
-            <img height={500} width={500} src="../../assets/images/404.jpg" alt="Page Not Found" />
+        <div>
+            <img className='absolute top-20 left-130' height={600} width={600} src={errorImage} alt="Page Not Found" />
         </div>
     );
 };
