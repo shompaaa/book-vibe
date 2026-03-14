@@ -1,10 +1,13 @@
+import { FaStarHalfAlt } from "react-icons/fa";
+
+
 const Book = ({ singleBook }) => {
 
-    const {bookName,author,image} = singleBook;
+    const {bookName,author,image,category,rating} = singleBook;
 
   return (
-    <div className="card bg-base-100 w-96 shadow-sm">
-      <figure className="px-24 py-8">
+    <div className="card bg-base-100 w-96 shadow-sm border-gray-300 p-6">
+      <figure className="px-24 py-8 bg-[#F3F3F3] rounded-2xl">
         <img height={166} width={124}
           src={image}
           alt="Shoes"
@@ -12,7 +15,7 @@ const Book = ({ singleBook }) => {
       </figure>
       <div className="card-body">
         <h2 className="card-title">
-          Card Title
+          {bookName}
           <div className="badge badge-secondary">NEW</div>
         </h2>
         <p>
@@ -20,8 +23,9 @@ const Book = ({ singleBook }) => {
           title and actions parts
         </p>
         <div className="card-actions justify-end">
-          <div className="badge badge-outline">Fashion</div>
-          <div className="badge badge-outline">Products</div>
+          <div className="badge ">{category}</div>
+          <div className="badge ">{rating} <FaStarHalfAlt />
+</div>
         </div>
       </div>
     </div>
