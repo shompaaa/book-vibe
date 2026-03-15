@@ -17,7 +17,7 @@ const ReadList = () => {
       convertedStoredBookData.includes(book.bookId),
     );
     setReadList(myReadList);
-  }, []);
+  }, [data]);
 
   const handleSort = (type) => {
     setSort(type);

@@ -34,7 +34,7 @@ const BookDetails = () => {
   } = singleBook;
 
   return (
-    <div className="flex gap-12 mt-12">
+    <div className="flex gap-12 mt-12 mb-20">
       <div className="w-1/2 p-16 bg-gray-200 rounded-2xl">
         <img className="w-3/4" src={image} alt="" />
       </div>
