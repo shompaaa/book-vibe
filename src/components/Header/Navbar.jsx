@@ -4,13 +4,14 @@ import { NavLink } from "react-router";
 const Navbar = () => {
   const links = (
     <>
-      <NavLink to='/' className="mr-2">Home</NavLink>
-      <NavLink to='/about'>About</NavLink>
+      <NavLink to='/' className="mr-6">Home</NavLink>
+      <NavLink to='/about' className="mr-6">About</NavLink>
+      <NavLink to='/readList'>ReadList</NavLink>
     </>
   );
 
   return (
-    <div className="navbar bg-base-100 shadow-sm">
+    <div className="navbar bg-base-100">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -37,13 +38,14 @@ const Navbar = () => {
             {links}
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">daisyUI</a>
+        <a className=" text-xl font-extrabold">Book Vibe</a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{links}</ul>
       </div>
-      <div className="navbar-end">
-        <a className="btn">Button</a>
+      <div className="navbar-end flex gap-5">
+        <a className="btn btn-success border-none">Sign In</a>
+        <a className="btn btn-info border-none">Sign Up</a>
       </div>
     </div>
   );
